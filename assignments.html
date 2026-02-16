@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Assignment · AI Study Assistant</title>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Manage and organize your learning documents with AI-powered assistance." />
+    <meta name="theme-color" content="#20B486" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <link rel="icon" href="images/Sidebar/Navigation/Icon/2.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/media-queries.css" />
+    <link rel="stylesheet" href="assets/css/assignmentsStyle.css" />
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            <!-- Sidebar -->
+            <aside class="col-lg-2 col-md-3 col-12 sidebar" aria-label="Main Navigation">
+                <div class="sidebar-inner">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="images/Sidebar/logo/Vector.svg" alt="AI Study Assistant">
+                        <span>AI Study Assistant</span>
+                    </div>
+                    <!-- Navigation -->
+                    <ul class="sidebar-nav">
+                        <li>
+                            <a href="dashboard.html" class="nav-item">
+                                <img src="images/Sidebar/Navigation/Icon/1.svg" alt="">
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="assignments.html" class="nav-item active">
+                                <img src="images/Sidebar/Navigation/Icon/2.svg" alt="">
+                                <span>Assignments</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="schedule.html" class="nav-item">
+                                <img src="images/Sidebar/Navigation/Icon/3.svg" alt="">
+                                <span>Schedule</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="documents.html" class="nav-item ">
+                                <img src="images/Sidebar/Navigation/Icon/4.svg" alt="">
+                                <span>Documents</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="flashcards.html" class="nav-item">
+                                <img src="images/Sidebar/Navigation/Icon/5.svg" alt="">
+                                <span>Flash Cards</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="quizzes.html" class="nav-item">
+                                <img src="images/Sidebar/Navigation/Icon/6.svg" alt="">
+                                <span>Quizzes</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+
+            <!-- Main Content -->
+            <main class="col-lg-10 col-md-9 col-12 main-content">
+                <!-- Top Bar -->
+                <div class="top-bar d-flex justify-content-between align-items-center mb-4">
+                    <div class="search-box">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+
+                    <div class="user-info d-flex align-items-center gap-3">
+                        <a href="#"> <i class="bell fa-regular fa-bell"></i></a>
+                        <img src="images/avatar.png" class="user-avatar" alt="User">
+                        <span class="user-name">Noura</span>
+                    </div>
+                </div>
+
+                <!-- Page Title -->
+                <div class="page-header mb-4">
+                    <h2>Assignments</h2>
+                    <p>View and manage your assignments</p>
+                </div>
+
+                <!-- Assignments Table -->
+                <div class="card assignments-card">
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Assignment Title</th>
+                                    <th>Course / Lessons</th>
+                                    <th>Due Date</th>
+                                    <th>Status</th>
+                                    <th>Submit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Conducting User Research</td>
+                                    <td>User Research and Personas</td>
+                                    <td>July 1, 2024</td>
+                                    <td><span class="status done">Done</span></td>
+                                    <td class="submitted">Submitted</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Competitive Analysis Report</td>
+                                    <td>Competitive Analysis</td>
+                                    <td>July 25, 2024</td>
+                                    <td><span class="status progress">Progress</span></td>
+                                    <td><a href="#" class="upload">Upload</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Creating Wireframes</td>
+                                    <td>Wireframing & Prototyping</td>
+                                    <td>August 1, 2024</td>
+                                    <td><span class="status progress">Progress</span></td>
+                                    <td><a href="#" class="upload">Upload</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Usability Testing</td>
+                                    <td>Usability Testing</td>
+                                    <td>August 22, 2024</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td><a href="#" class="upload">Upload</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-wrapper d-flex justify-content-between align-items-center mt-4">
+                    <div>
+                        Show
+                        <select class="form-select d-inline w-auto">
+                            <option>10</option>
+                            <option>20</option>
+                        </select>
+                        Row
+                    </div>
+
+                    <nav>
+                        <ul class="pagination mb-0">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </main>
+
+
+
+        </div>
+    </div>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,429 @@
+:root {
+  --primary: #20B486;
+  --primary-soft: #eaf7f3;
+  --text-dark: #111827;
+  --text-muted: #8a8a8a;
+  --text-light: rgba(17, 24, 39, .65);
+  --bg-page: #f7f9fb;
+  --sidebar-width: 260px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 24px -10px;
+  font: 700 18px/1 system-ui;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain
+}
+
+.logo span {
+  white-space: nowrap
+}
+
+/* ================= Sidebar ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.sidebar-inner {
+  padding: 28px 18px
+}
+
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.sidebar-nav a {
+  display: block;
+  text-decoration: none;
+  color: inherit
+}
+
+/* Nav Item */
+.sidebar-nav .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  font: 500 15px system-ui;
+  color: var(--text-muted);
+  transition: .2s;
+}
+
+.sidebar-nav .nav-item:hover {
+  background: #f9fafb;
+  color: var(--primary)
+}
+
+.sidebar-nav .nav-item.active {
+  background: var(--primary);
+  color: #fff
+}
+
+.sidebar-nav .nav-item img {
+  width: 20px;
+  height: 20px;
+  opacity: .6;
+  transition: .2s
+}
+
+.sidebar-nav .nav-item:hover img,
+.sidebar-nav .nav-item.active img {
+  opacity: 1
+}
+
+.sidebar-nav .nav-item.active img {
+  filter: brightness(0) invert(1)
+}
+
+/* ================= Header ================= */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  padding: 16px 24px;
+  background: var(--bg-page);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ===== Row 1: Search + Actions ===== */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Search LEFT */
+.header-search {
+  display: flex;
+}
+
+/* Actions RIGHT */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== Row 2: Title + Button ===== */
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Page title */
+.page-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  color: black;
+}
+
+
+/* ================= Actions ================= */
+
+.bell {
+  font-size: 24px;
+  margin-right: 8px;
+  color: black;
+}
+
+.imge {
+  width: 30px;
+  border-radius: 50%;
+  position: relative;
+  top: -5px;
+}
+
+h5 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+/* ================= Buttons ================= */
+.upload-btn,
+.primary-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.upload-btn::after,
+.primary-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .35), transparent);
+  transform: translateX(-100%)
+}
+
+.upload-btn:hover::after,
+.primary-btn:hover::after {
+  transform: translateX(100%);
+  transition: .6s
+}
+
+.upload-btn:hover,
+.primary-btn:hover {
+  background: #1fa27b
+}
+
+/* ================= Main ================= */
+.main-area {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  padding: 30px 40px;
+}
+
+/* ================= Document Cards ================= */
+.doc-card {
+  background: #fff;
+  padding: 10px 5px ;
+  border-radius: 18px;
+  height: 100%;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, .06),
+    inset 0 1px 0 rgba(255, 255, 255, .6);
+  transition: .3s
+}
+
+.doc-card:hover {
+  transform: translateY(-4px)
+}
+
+.doc-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px
+}
+
+.doc-icon img {
+  width: 22px;
+  filter: brightness(0) invert(1)
+}
+
+/* Title */
+.doc-title,
+.flash-title {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: .2s
+}
+
+.doc-title:hover,
+.flash-title:hover {
+  color: var(--primary)
+}
+
+.size {
+  font-size: 13px;
+  color: var(--text-light)
+}
+
+/* ================= Badges ================= */
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: .25s
+}
+
+.badge img {
+  width: 16px
+}
+
+/* Flashcard */
+.badge.flash {
+  color: #9615d8;
+  background: rgba(150, 21, 216, .12)
+}
+
+.badge.flash img {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(88%) saturate(7496%) hue-rotate(270deg) brightness(92%) contrast(101%);
+}
+
+/* Quiz */
+.badge.quiz {
+  color: #27B689;
+  background: rgba(39, 182, 137, .12)
+}
+
+.badge:hover {
+  color: #000;
+  background: #f3f4f6;
+}
+
+.badge:hover img {
+  filter: brightness(0);
+}
+
+
+/* ================= Time (Uploaded ...) ================= */
+.time,
+.flash-meta {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.time img {
+  width: 14px;
+  height: 14px;
+  opacity: .7;
+  filter: brightness(0) saturate(100%) invert(45%);
+}
+
+/* Time stays SAME on hover */
+.doc-card:hover .time,
+.doc-card:hover .time img {
+  color: var(--text-muted);
+  filter: brightness(0) saturate(100%) invert(45%);
+}
+
+
+/* ================= FlashCards ================= */
+.flash-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+  transition: .25s
+}
+
+.flash-card:hover {
+  transform: translateY(-5px)
+}
+
+.flash-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--primary-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px
+}
+
+.flash-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 16px
+}
+
+.flash-stats .stat {
+  padding: 4px 10px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600
+}
+
+.stat:hover {
+  color: #000;
+  background: #f3f4f6;
+}
+
+
+.flash-stats .progress {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 0;
+  background: none;
+}
+
+.flash-stats .progress img {
+  width: 25px
+}
+
+/* Study Button */
+.study-btn {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  background: #ecfdf3;
+  color: var(--primary);
+  font-weight: 600
+}
+
+.study-btn:hover {
+  background: var(--primary-soft)
+}

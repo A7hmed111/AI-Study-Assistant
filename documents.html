@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Documents · AI Study Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Manage and organize your learning documents with AI-powered assistance." />
+  <meta name="theme-color" content="#20B486" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="icon" href="images/Sidebar/Navigation/Icon/4.svg" type="image/svg+xml" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/normalize.css" />
+  <link rel="stylesheet" href="assets/css/media-queries.css" />
+  <link rel="stylesheet" href="assets/css/flashcard.css" />
+</head>
+
+<body>
+  <!-- ====== App Layout ====== -->
+  <div class="app-layout">
+    <!-- ====== Sidebar ====== -->
+    <aside class="sidebar" aria-label="Main Navigation">
+      <div class="sidebar-inner">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="images/Sidebar/logo/Vector.svg" alt="AI Study Assistant">
+          <span>AI Study Assistant</span>
+        </div>
+        <!-- Navigation -->
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html" class="nav-item">
+              <img src="images/Sidebar/Navigation/Icon/1.svg" alt="">
+              <span>Dashboard</span>
+            </a></li>
+          <li><a href="assignments.html" class="nav-item">
+              <img src="images/Sidebar/Navigation/Icon/2.svg" alt="">
+              <span>Assignments</span>
+            </a></li>
+          <li><a href="schedule.html" class="nav-item">
+              <img src="images/Sidebar/Navigation/Icon/3.svg" alt="">
+              <span>Schedule</span>
+            </a></li>
+          <li><a href="documents.html" class="nav-item active">
+              <img src="images/Sidebar/Navigation/Icon/4.svg" alt="">
+              <span>Documents</span>
+            </a></li>
+          <li><a href="flashcards.html" class="nav-item ">
+              <img src="images/Sidebar/Navigation/Icon/5.svg" alt="">
+              <span>Flash Cards</span>
+            </a></li>
+          <li><a href="quizzes.html" class="nav-item">
+              <img src="images/Sidebar/Navigation/Icon/6.svg" alt="">
+              <span>Quizzes</span>
+            </a></li>
+        </ul>
+      </div>
+    </aside>
+    <!-- ====== Main Area ====== -->
+    <div class="main-area">
+      <!-- ====== Header ====== -->
+      <header class="app-header">
+        <!-- Row 1 -->
+        <div class="header-top">
+          <div class="header-bottom">
+            <h2 class="page-title">Documents</h2>
+      
+          </div>
+          <!-- Actions -->
+          <div class="header-actions">
+            <div class="inf d-flex justify-content-between align-items-center">
+              <a href="#"> <i class="bell fa-regular fa-bell"></i></a>
+              <img src="images/avatar.png " alt="" class="imge" />
+              <h5>NOURA</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="header-bottom">
+          <p class="p">Let's Learn Something New Today!</p>
+          <button class="primary-btn" type="button">
+            <span class="plus">+</span>
+            Upload Document
+          </button>
+        </div>
+      </header>
+      <!-- ================= Content ================= -->
+      <main class="main-content">
+        <!-- ================= Documents ================= -->
+        <section class="documents mt-4" aria-label="Documents List">
+          <div class="row g-4 justify-content-start">
+            <!-- Card -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+              <div class="doc-card">
+                <div class="doc-icon">
+                  <img src="images/document/card/document.svg" alt="">
+                </div>
+                <h6 class="doc-title">React Concepts Detailed</h6>
+                <span class="size">8.8 KB</span>
+                <div class="badges">
+                  <span class="badge flash">
+                    <img src="images/document/card/flashcard.svg" alt="">
+                    1 Flashcard
+                  </span>
+                  <span class="badge quiz">
+                    <img src="images/document/card/quiz.svg" alt="">
+                    0 Quizzes
+                  </span>
+                </div>
+                <div class="time">
+                  <img src="images/document/card/clock.svg" alt="">
+                  Uploaded 4 minutes ago
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+              <div class="doc-card">
+                <div class="doc-icon">
+                  <img src="images/document/card/document.svg" alt="">
+                </div>
+                <h6 class="doc-title">A Comprehensive Guide to Java</h6>
+                <span class="size">100.9 KB</span>
+                <div class="badges">
+                  <span class="badge flash">
+                    <img src="images/document/card/flashcard.svg" alt="">
+                    1 Flashcard
+                  </span>
+                  <span class="badge quiz">
+                    <img src="images/document/card/quiz.svg" alt="">
+                    0 Quizzes
+                  </span>
+                </div>
+                <div class="time">
+                  <img src="images/document/card/clock.svg" alt="">
+                  Uploaded a day ago
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+              <div class="doc-card">
+                <div class="doc-icon">
+                  <img src="images/document/card/document.svg" alt="">
+                </div>
+                <h6 class="doc-title">A Comprehensive CSS Guide</h6>
+                <span class="size">106.9 KB</span>
+                <div class="badges">
+                  <span class="badge flash">
+                    <img src="images/document/card/flashcard.svg" alt="">
+                    1 Flashcard
+                  </span>
+                  <span class="badge quiz">
+                    <img src="images/document/card/quiz.svg" alt="">
+                    0 Quizzes
+                  </span>
+                </div>
+                <div class="time">
+                  <img src="images/document/card/clock.svg" alt="">
+                  Uploaded a day ago
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+              <div class="doc-card">
+                <div class="doc-icon">
+                  <img src="images/document/card/document.svg" alt="">
+                </div>
+                <h6 class="doc-title">Ultimate HTML Guide</h6>
+                <span class="size">113.1 KB</span>
+                <div class="badges">
+                  <span class="badge flash">
+                    <img src="images/document/card/flashcard.svg" alt="">
+                    1 Flashcard
+                  </span>
+                  <span class="badge quiz">
+                    <img src="images/document/card/quiz.svg" alt="">
+                    1 Quizzes
+                  </span>
+                </div>
+                <div class="time">
+                  <img src="images/document/card/clock.svg" alt="">
+                  Uploaded a day ago
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/all.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

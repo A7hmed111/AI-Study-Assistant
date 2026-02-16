@@ -1,0 +1,343 @@
+:root {
+    --primary: #20B486;
+    --primary-soft: #eaf7f3;
+    --text-dark: #111827;
+    --text-muted: #8a8a8a;
+    --text-light: rgba(17, 24, 39, 0.65);
+    --bg-white: #ffffff;
+    --bg-page: #f7f9fb;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-page);
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* ================= Logo ================= */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 24px;
+    margin-left: -10px;
+    padding: 0;
+    background: transparent;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-dark);
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo span {
+    white-space: nowrap;
+}
+
+/* ================= Sidebar Inner ================= */
+.sidebar-inner {
+    padding: 28px 18px;
+}
+
+/* ================= Navigation ================= */
+.sidebar {
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    min-height: 100vh;
+}
+
+.sidebar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+/* Reset links */
+.sidebar-nav a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* ================= Nav Item ================= */
+.sidebar-nav .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    margin-bottom: 6px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: transparent;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* Hover */
+.sidebar-nav .nav-item:hover {
+    background: #f9fafb;
+    color: var(--primary);
+}
+
+/* ================= Active ================= */
+.sidebar-nav .nav-item.active {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+/* ================= Icons ================= */
+.sidebar-nav .nav-item img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.sidebar-nav .nav-item:hover img {
+    opacity: 1;
+}
+
+.sidebar-nav .nav-item.active img {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    padding: 40px 60px;
+    background-color: #f5f7fa;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+    margin-bottom: 32px;
+}
+
+.top-bar .search-box input {
+    width: 300px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 0 16px;
+    background: #fff;
+}
+.bell {
+    font-size: 24px;
+    color: black;
+}
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-weight: 500;
+}
+
+
+/* =========================================================
+PAGE HEADER
+========================================================= */
+
+.page-header h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.page-header p {
+    font-size: 14px;
+    color: #8a94a6;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.assignments-card {
+    background: #ffffff !important;
+    border-radius: 16px;
+    padding: 28px 32px;
+    border: 1px solid #eef0f4;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.table thead th {
+    font-size: 14px;
+    font-weight: 500;
+    color: #8a94a6;
+    padding: 18px 0;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.table tbody td {
+    font-size: 15px;
+    padding: 22px 0;
+    vertical-align: middle;
+    border-bottom: 1px solid #edf0f4;
+    background: #fff;
+}
+
+/* Fix column widths */
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    width: 28%;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: 28%;
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+    width: 16%;
+}
+
+.table th:nth-child(4),
+.table td:nth-child(4) {
+    width: 14%;
+}
+
+.table th:nth-child(5),
+.table td:nth-child(5) {
+    width: 14%;
+}
+
+
+/* =========================================================
+   STATUS BADGES (FINAL FIX)
+========================================================= */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+    height: 34px;
+    padding: 0 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Done */
+.status.done {
+    background: #e7f6f0;
+    color: #20b486;
+}
+
+/* Progress */
+.status.progress {
+    background: #e9f0ff;
+    color: #3b82f6;
+}
+
+/* Pending */
+.status.pending {
+    background: #fdecec;
+    color: #ef4444;
+}
+
+
+/* =========================================================
+   SUBMIT / UPLOAD
+========================================================= */
+
+.upload {
+    color: #20b486;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.upload:hover {
+    text-decoration: underline;
+}
+
+.submitted {
+    color: #b1b5c3;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.pagination-wrapper {
+    margin-top: 36px;
+}
+
+.pagination {
+    margin-bottom: 0;
+}
+
+.pagination .page-link {
+    border: none;
+    background: #f1f3f7;
+    color: #6b7280;
+    border-radius: 10px;
+    padding: 8px 14px;
+    margin-left: 6px;
+}
+
+.pagination .page-item.active .page-link {
+    background: #20b486;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+SHOW ROW SELECT (ONE ARROW ONLY)
+========================================================= */
+
+.form-select {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    padding: 6px 36px 6px 12px;
+    background-color: #ffffff;
+    font-size: 14px;
+
+    /* remove bootstrap + browser arrows */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* custom arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 6.646a.5.5 0 0 1 .708 0L8 9.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}

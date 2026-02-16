@@ -1,0 +1,316 @@
+:root {
+  --primary: #20B486;
+  --primary-soft: #eaf7f3;
+  --text-dark: #111827;
+  --text-muted: #8a8a8a;
+  --text-light: rgba(17, 24, 39, 0.65);
+  --bg-white: #ffffff;
+  --bg-page: #f7f9fb;
+}
+body {
+  margin: 0;
+  background: var(--bg-page);
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+/* ================= Logo ================= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 24px;
+  margin-left: -10px;
+  padding: 0;
+  background: transparent;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text-dark);
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.logo span {
+  white-space: nowrap;
+}/* ================= Sidebar Inner ================= */
+.sidebar-inner {
+  padding: 28px 18px;
+}
+/* ================= Navigation ================= */
+.sidebar {
+  background: #ffffff; 
+  border-right: 1px solid #e5e7eb; 
+  min-height: 100vh;
+}
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: transparent; 
+}
+/* Reset links */
+.sidebar-nav a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+/* ================= Nav Item ================= */
+.sidebar-nav .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+/* Hover */
+.sidebar-nav .nav-item:hover {
+  background: #f9fafb; 
+  color: var(--primary);
+}
+/* ================= Active ================= */
+.sidebar-nav .nav-item.active {
+  background: var(--primary);
+  color: #ffffff;
+}
+/* ================= Icons ================= */
+.sidebar-nav .nav-item img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+.sidebar-nav .nav-item:hover img {
+  opacity: 1;
+}
+.sidebar-nav .nav-item.active img {
+  filter: brightness(0) invert(1);
+  opacity: 1;
+}
+/* ================= Main Content ================= */
+.main-content {
+  padding: 30px;
+}
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.upload-btn,
+.primary-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.upload-btn::after,
+.primary-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .35), transparent);
+  transform: translateX(-100%)
+}
+
+.upload-btn:hover::after,
+.primary-btn:hover::after {
+  transform: translateX(100%);
+  transition: .6s
+}
+
+.upload-btn:hover,
+.primary-btn:hover {
+  background: #1fa27b
+}
+/* ================= Top Bar ================= */
+.page-title::after,
+.doc-card::after {
+  display: none;
+}
+/* ================= Subtitle ================= */
+.page-subtitle {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--text-light);
+  letter-spacing: 0.3px;
+  position: relative;
+}
+.page-subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.35),
+    transparent
+  );
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+/* Upload Button */
+.upload-btn {
+  position: relative;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  overflow: hidden;
+  transition: background 0.25s;
+}
+.upload-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+.upload-btn:hover::after {
+  transform: translateX(100%);
+  transition: transform 0.6s;
+}
+.upload-btn:hover {
+  background: #1fa27b;
+}
+.upload-btn .plus {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+/* ================= Cards ================= */
+.doc-card {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  border-radius: 18px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.doc-card:hover {
+  transform: translateY(-4px);
+}
+/* Card Icon */
+.doc-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.doc-icon img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+/* Title */
+.doc-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;   
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+.doc-title:hover {
+  color: var(--primary);
+}
+.size {
+  font-size: 13px;
+  color: var(--text-light);
+}
+/* ================= Badges ================= */
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+.badge img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  transition: filter 0.25s;
+}
+/* Quizzes */
+.badge.quiz {
+  color: #27B689;
+  background: rgba(39, 182, 137, 0.12);
+}
+/* Flashcard */
+.badge.flash {
+  color: #9615d8;
+  background: rgba(150, 21, 216, 0.12);
+}
+/* Hover on badges */
+.badge:hover {
+  color: #000;
+  background: #f3f4f6;
+}
+.badge:hover img {
+  filter: brightness(0);
+}
+/* ================= Time ================= */
+.time {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.time img {
+  width: 14px;
+  height: 14px;
+  filter: brightness(0) saturate(100%) invert(45%);
+}

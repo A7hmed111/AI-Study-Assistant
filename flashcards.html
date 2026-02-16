@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>FlashCards · AI Study Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Manage and organize your learning documents with AI-powered assistance." />
+  <meta name="theme-color" content="#20B486" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="icon" href="images/Sidebar/Navigation/Icon/5.svg" type="image/svg+xml" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/normalize.css" />
+  <link rel="stylesheet" href="assets/css/media-queries.css" />
+  <link rel="stylesheet" href="assets/css/flashcard.css" />
+</head>
+
+<body>
+  <!-- ====== App Layout ====== -->
+  <div class="app-layout">
+    <!-- ====== Sidebar ====== -->
+    <aside class="sidebar" aria-label="Main Navigation">
+      <div class="sidebar-inner">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="images/Sidebar/logo/Vector.svg" alt="AI Study Assistant">
+          <span>AI Study Assistant</span>
+        </div>
+        <!-- Navigation -->
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html" class="nav-item">
+              <img src="images/Sidebar/Navigation/Icon/1.svg" alt="">
+              <span>Dashboard</span>
+            </a></li>
+          <li><a href="assignments.html" class="nav-item">
+              <img src="images/Sidebar/Navigation/Icon/2.svg" alt="">
+              <span>Assignments</span>
+            </a></li>
+          <li><a href="schedule.html" class="nav-item">
+              <img src="images/Sidebar/Navigation/Icon/3.svg" alt="">
+              <span>Schedule</span>
+            </a></li>
+          <li><a href="documents.html" class="nav-item ">
+              <img src="images/Sidebar/Navigation/Icon/4.svg" alt="">
+              <span>Documents</span>
+            </a></li>
+          <li><a href="flashcards.html" class="nav-item active">
+              <img src="images/Sidebar/Navigation/Icon/5.svg" alt="">
+              <span>Flash Cards</span>
+            </a></li>
+          <li><a href="quizzes.html" class="nav-item">
+              <img src="images/Sidebar/Navigation/Icon/6.svg" alt="">
+              <span>Quizzes</span>
+            </a></li>
+        </ul>
+      </div>
+    </aside>
+    <!-- ====== Main Area ====== -->
+    <div class="main-area">
+      <!-- ====== Header ====== -->
+      <header class="app-header">
+        <!-- Row 1 -->
+        <div class="header-top">
+        <div class="header-bottom">
+          <h2 class="page-title">FlashCards</h2>
+        
+        </div>
+          <!-- Actions -->
+          <div class="header-actions">
+            <div class="inf d-flex justify-content-between align-items-center">
+              <a href="#"> <i class="bell fa-regular fa-bell"></i></a>
+              <img src="images/avatar.png " alt="" class="imge" />
+              <h5>NOURA</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="header-bottom">
+          <p class="p">Let's Learn Something New Today!</p>
+          <button class="primary-btn" type="button">
+            <span class="plus">+</span>
+            Add FlashCard
+          </button>
+        </div>
+      </header>
+      <!-- ================= Main Content ================= -->
+      <div class="main-content">
+        <section class="flashcards">
+          <div class="row g-4">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+              <div class="flash-card">
+                <div class="flash-icon">
+                  <img src="images/flash/Cards/cards-blank_16769316 1.svg" alt="Flashcard">
+                </div>
+                <h6 class="flash-title" title="REACT JS Concept Guide">
+                  REACT JS Concept Guide
+                </h6>
+                <p class="flash-meta">CREATED 6 MIN AGO</p>
+                <div class="flash-stats">
+                  <span class="stat">10 Cards</span>
+                  <span class="progress">
+                    <img src="images/flash/Cards/ic-trending-up-24px.svg" alt="Progress">
+                    50%
+                  </span>
+                </div>
+                <button class="study-btn">Study Now</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        </main>
+      </div>
+    </div>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
